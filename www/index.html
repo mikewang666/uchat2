@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>Ionic</title>
+
+  <!-- Ionic framework - replace the CDN links with local files and build -->    
+  <link href="lib/ionicframework/ionic.min.css" rel="stylesheet" />
+  <link href="lib/ionicframework/ionicons.min.css" rel="stylesheet" />
+  <!--<script src="lib/ionicframework/ionic.min.js"></script>-->
+  
+
+  <link href="css/app.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+        
+</head>
+
+<body>
+    <div class="bar bar-header bar-dark">
+            <h1 class="title">Uchat</h1>
+        </div>
+
+    
+    <div class="login-in list">
+  <label class="item item-input">
+    <span class="input-label">Username</span>
+    <input type="text" id="username">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" id="key">
+  </label>
+    <button class="button button-calm" id="login">
+    submit
+    </button>
+</div>
+    
+    
+    <div class="chat-dialog" id="wu-chat-dialog" >
+            <div class="header" id="wu-header">
+                <span class="quit">back</span>
+                <span class="name">wu</span>
+                <span class="options">top</span>
+            </div>
+        <div class="message-display-area" id="wu-message-display-area"><ul id="list"></ul>  </div>
+        <div class="rmessage-display-area" id="wu-rmessage-display-area"> </div>
+        <div class="bottom" id="wu-bottom">
+            <div class="input-area" id="wu-input-area">
+                <div class="tabs chattext" id="wu-chattext">
+                    <div class="add-picture" id="wu-add"></div>
+                    <div ><textarea></textarea></div>
+                    <div class="send-message" id="wu-send"></div>  
+                </div>
+                <div class="picture-input-area" id="wu-picture-input-area" style="display: none;" >
+                <img id="wu-captured-image-placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-dialog" id="wang-chat-dialog">
+            <div class="header" id="wang-header">
+                <span class="quit">back</span>
+                <span class="name">wang</span>
+                <span class="options">top</span>
+            </div>
+        <div class="message-display-area" id="wang-message-display-area">  <ul id="list"></ul> </div>
+        <div class="bottom" id="wang-bottom">
+            <div class="input-area" id="wang-input-area">
+                <div class="tabs chattext" id="wang-chattext">
+                    <div class="add-picture"  id="wang-add"></div>
+                    <div ><textarea></textarea></div>
+                    <div class="send-message" id="wang-send"></div>  
+                </div>
+                <div class="picture-input-area" id="wang-picture-input-area" style="display: none;" >
+                <img id="wang-captured-image-placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-dialog" id="yang-chat-dialog">
+            <div class="header" id="yang-header">
+                <span class="quit">back</span>
+                <span class="name">yang</span>
+                <span class="options">top</span>
+            </div>
+        <div class="message-display-area" id="yang-message-display-area">  <ul id="list"></ul> </div>
+        <div class="bottom" id="yang-bottom">
+            <div class="input-area" id="yang-input-area">
+                <div class="tabs chattext" id="yang-chattext">
+                    <div class="add-picture"  id="yang-add"></div>
+                    <div ><textarea></textarea></div>
+                    <div class="send-message" id="yang-send"></div>  
+                </div>
+                <div class="picture-input-area" id="yang-picture-input-area" style="display: none;" >
+                <img id="yang-captured-image-placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-dialog" id="yao-chat-dialog">
+            <div class="header" id="yao-header">
+                <span class="quit">back</span>
+                <span class="name">yao</span>
+                <span class="options">top</span>
+            </div>
+        <div class="message-display-area" id="yao-message-display-area">  <ul id="list"></ul> </div>
+        
+        <div class="bottom" id="wang-bottom">
+            <div class="input-area" id="yao-input-area">
+                <div class="tabs chattext" id="yao-chattext">
+                    <div class="add-picture"  id="yao-add"></div>
+                    <div ><textarea></textarea></div>
+                    <div class="send-message" id="yao-send"></div>  
+                </div>
+                <div class="picture-input-area" id="yao-picture-input-area" style="display: none;" >
+                <img id="yao-captured-image-placeholder">
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div id="wechat-content" class="content has-header">
+    <!-- content of "微信" tab. -->
+      <div class="list">
+
+          <a class="item item-thumbnail-left" href="#" id='exwu'>
+              <img src="img\000.jpg">
+              <h2>Wu</h2>
+              <p>Nine one day!</p>
+          </a>
+
+          <a class="item item-thumbnail-left" href="#" id='exyang'>
+              <img src="img\001.jpg">
+              <h2>Yang</h2>
+              <p>Have a good day!</p>
+          </a>
+           <a class="item item-thumbnail-left" href="#" id='exwang'>
+              <img src="img\003.jpg">
+              <h2>Wang</h2>
+              <p>go for it!</p>
+          </a>
+
+          <a class="item item-thumbnail-left" href="#" id='exyao'>
+              <img src="img\002.jpg">
+              <h2>Yao</h2>
+              <p>work hard!</p>
+          </a>
+          
+          
+      </div>
+  </div>
+    <div id="address-book-content" class="content has-header">
+    <!-- content of "通讯录" tab. -->
+      <div class="list">
+          <div class="item item-divider">
+              W
+          </div>
+          
+          <a class="item item-avatar" href="#" id="wang">
+              <img src="img\003.jpg">
+              <h2>Wang</h2>
+              
+          </a>
+          <a class="item item-avatar" href="#" id="wu">
+              <img src="img\000.jpg">
+              <h2>Wu</h2>
+              
+          </a>
+
+          <div class="item item-divider">
+              Y
+          </div>
+          <a class="item item-avatar" href="#" id="yang">
+              <img src="img\001.jpg">
+              <h2>Yang</h2>
+              
+          </a>
+          
+          <a class="item item-avatar" href="#" id="yao">
+              <img src="img\002.jpg">
+              <h2>Yao</h2>
+              
+          </a>
+      </div>
+
+    </div>
+    <div id="discover-content" class="content has-header">
+    <!-- content of "微信" tab. -->
+      <div class="list">
+
+          <div class="item item-divider">
+          </div>
+          
+           <div class="item item-button-left">
+              Scan QR Code
+              <button class="button button-positive">
+                  <i class="icon ion-chatbubble-working"></i>
+              </button>
+          </div>
+          
+      </div>
+  </div>   
+    <div id="me-content" class="content has-header">
+    <!-- content of "微信" tab. -->
+      <div class="list">
+          
+          <div class="item item-divider">
+          </div>
+          
+          <a class="item item-thumbnail-left" href="#">
+              <div class ="userimage"></div>
+              <!--img src="img\winston.jpg" id="userimage"-->
+              <span id="uname"></span>
+              <p>
+              <span id="uid"></span>
+              </p>
+          </a>
+          
+          <div class="item item-divider">
+          </div>          
+
+           <div class="item item-button-left">
+              Favorites
+              <button class="button button-positive">
+                  <i class="icon ion-star"></i>
+              </button>
+          </div>
+          
+          <div class="item item-divider">
+          </div>
+          
+          <div class="item item-button-left Settings">
+              Settings
+              <button class="button button-positive">
+                  <i class="icon ion-gear-a"></i>
+              </button>
+          </div>
+      
+      
+      </div>
+    </div>
+    
+     <div class="tabs set-quit">
+        <button class="button icon-left ion-chevron-left button-positive">Back</button>
+        <button class="button icon-right ion-chevron-right button-positive">Quit</button>
+    </div>
+    
+    <div class="bar bar-footer">
+      <div class="tabs tabs-icon-top">
+          <a class="tab-item"  id="wechat">
+              <i class="icon ion-ios-chatbubble"></i>
+              Wechat
+          </a>
+ 
+          <a class="tab-item"  id="address-book">
+              <i class="icon ion-person-stalker"></i>
+              Contacts
+          </a>
+
+          <a class="tab-item" id="discover">
+              <i class="icon ion-android-compass"></i>
+              Discover
+          </a>
+
+          <a class="tab-item" id="me">
+              <i class="icon ion-person"></i>
+              Me
+          </a>
+      </div>    我
+  </div>
+ 
+
+  
+    
+    
+   <script src="intelxdk.js"></script>         <!-- phantom library, needed for XDK api calls -->
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls -->
+    <script src="xhr.js"></script>              <!-- phantom library, needed for XDK CORS -->
+       
+
+  
+    
+</body>
+</html>

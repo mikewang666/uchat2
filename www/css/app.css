@@ -1,0 +1,195 @@
+div.content {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px; /* Decrease this value for cross-browser compatibility */
+    overflow: auto;
+    padding: 44px 0;
+}
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+.bar-header{
+    width: 100%;
+}
+.chat-dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+.chat-dialog .header{
+    background-color: black;
+    height: 40px;
+    font-size: 15pt;
+    line-height: 30px;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.chat-dialog .header .options {
+    float: right;
+    cursor: pointer;
+    color: aliceblue;
+}
+.chat-dialog .header .quit {
+    cursor: pointer;
+    color: aliceblue;
+}
+.chat-dialog .header .name {
+    padding: 0 90px;
+    color: aliceblue;    
+}
+.chat-dialog .message-display-area {
+    padding: 0 10px;
+    height: -webkit-calc(100% - 90px);
+    overflow: auto;
+}
+.chat-dialog .rmessage-display-area {
+    padding: 0 10px;
+    height: -webkit-calc(100% - 90px);
+    overflow: auto;
+}
+
+.chat-dialog .message-display-area .one-message {
+    background-color:chartreuse;
+    margin: 10px 0;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    padding: 5px;
+    width:60%;
+    float: right;
+}
+.chat-dialog .rmessage-display-area .one-message {
+    background-color:deepskyblue;
+    margin: 10px 0;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 10px;
+    padding: 5px;
+    width:60%;
+    float: left;
+}
+
+
+
+.chat-dialog .message-display-area .one-message .text-message pre {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: black;
+    background-color: transparent;
+    border: 0;
+}
+
+.chat-dialog .message-display-area .one-message .picture-message {
+    line-height: 0;
+}
+
+.chat-dialog .message-display-area .one-message .picture-message img{
+    width: 100px;
+    margin-top: 5px;
+}
+
+.chat-dialog .input-area {
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+}
+
+.chat-dialog .input-area .chattext {
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-bottom-color: gray;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.chat-dialog .input-area .chattext .add-picture {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url(../img/plus-round.png);
+    background-position: center;
+    border: 1px solid rgb(115,115,115);
+    border-top-radius: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.chat-dialog .input-area .chattext textarea {
+    width: -webkit-calc(93%);
+    height: 40px;
+    outline: none;
+    resize: none;
+    float: left;
+    margin: 0 10px;
+    font-size: 17pt;
+}
+
+.chat-dialog .input-area .chattext .send-message {
+     width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-position: center;
+    background-image: url(../img/arrow-right-c.png);
+    border: 1px solid rgb(115,115,115);
+    border-radius: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+.chat-dialog .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.chat-dialog #wu-captured-image-placeholder {
+    width: 100px;
+    padding: 5px;
+}
+.chat-dialog #wang-captured-image-placeholder {
+    width: 100px;
+    padding: 5px;
+}.chat-dialog #yao-captured-image-placeholder {
+    width: 100px;
+    padding: 5px;
+}.chat-dialog #yang-captured-image-placeholder {
+    width: 100px;
+    padding: 5px;
+}
+.chat-dialog .input-area .picture-input-area{
+    padding-bottom: 40px;
+}
+
+
+.set-quit .ion-chevron-left{
+    width: 170px;
+    float: left;
+}
+.set-quit .ion-chevron-right{
+    width: 170px;
+    float: left;
+    
+}
+.Settings{
+    cursor: pointer;
+}
+    
+.userimage{
+    
+    float: right;
+}
+
+.button-calm {
+   
+    width: 100%;
+    cursor: pointer;
+    
+}
